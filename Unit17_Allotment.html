@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Senior Citizens Allotment</title>
+  <meta name="description" content="A friendly, accessible web page for our senior citizens allotment group." />
+  <style>
+    :root{--ink:#1a1a1a;--bg:#fff;--brand:#2e7d32;--brand-dark:#1b5e20;--muted:#f1f8e9;--link:#0b57d0;--focus:#ffab00;--radius:12px;--shadow:0 6px 18px rgba(0,0,0,.08);--maxw:1000px;--line:1.65;}
+    *,*::before,*::after{box-sizing:border-box} html{font-size:18px} @media (min-width:1100px){html{font-size:19px}}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:var(--line)}
+    a{color:var(--link)} a:focus,button:focus,input:focus,textarea:focus,select:focus{outline:3px solid var(--focus);outline-offset:3px}
+    img,svg{max-width:100%;height:auto;border-radius:var(--radius)} .container{width:min(94%,var(--maxw));margin:0 auto}
+    .skip-link{position:absolute;left:-9999px} .skip-link:focus{position:static;padding:.5rem .75rem;background:var(--focus);color:#000;border-radius:8px}
+    header{background:var(--muted);border-bottom:1px solid #e5e7eb} .top{display:flex;align-items:center;gap:.75rem;padding:.6rem 0} .logo{width:46px;height:46px} .title{font-weight:800;color:var(--brand-dark)}
+    #menu-toggle{display:none} .menu-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.4rem .6rem;border:1px solid #d2e7d2;border-radius:10px;background:#eaf4ea;color:#1b5e20;font-weight:600;cursor:pointer}
+    nav ul{list-style:none;margin:.6rem 0 0;padding:0;display:none;flex-direction:column;gap:.5rem} nav a{display:block;text-decoration:none;color:var(--brand-dark);background:#eaf4ea;border:1px solid #d2e7d2;padding:.55rem .8rem;border-radius:999px;font-weight:600}
+    #menu-toggle:checked ~ nav ul{display:flex} @media (min-width:800px){.menu-btn{display:none} nav ul{display:flex;flex-direction:row;gap:.5rem}}
+    .hero{margin:1rem 0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:#eaf4ea} .hero .copy{padding:1rem 1.1rem 1.2rem}
+    .hero h1{margin:.25rem 0;font-size:clamp(1.6rem,2.5vw + 1rem,2.3rem);color:var(--brand-dark)} .cta{display:inline-block;margin-top:.5rem;padding:.6rem 1rem;border-radius:10px;background:var(--brand);color:#fff;border:2px solid var(--brand);text-decoration:none;font-weight:800}
+    .cta:hover{background:var(--brand-dark);border-color:var(--brand-dark)} .grid{display:grid;gap:1rem;margin:1.25rem 0} @media (min-width:900px){.grid.cols-2{grid-template-columns:1.2fr .8fr}}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:var(--radius);padding:1rem;box-shadow:var(--shadow)} .card h2{margin:.2rem 0 .4rem;color:var(--brand-dark)}
+    ul.clean{padding-left:1.1rem} .badge{display:inline-block;padding:.2rem .5rem;border-radius:6px;background:#e3f2fd;color:#0b57d0;font-weight:700;font-size:.9rem} .hint{color:#475569;font-size:.95rem}
+    .gallery{display:grid;gap:.75rem;grid-template-columns:repeat(2,1fr)} @media (min-width:900px){.gallery{grid-template-columns:repeat(3,1fr)}} figure{margin:0} figcaption{font-size:.95rem;margin-top:.35rem;color:#374151}
+    table{width:100%;border-collapse:collapse;margin:.5rem 0} th,td{border:1px solid #e5e7eb;padding:.6rem;vertical-align:top} th{background:#f5f7f2;text-align:left} caption{text-align:left;font-weight:800;color:var(--brand-dark);margin-bottom:.4rem}
+    form{display:grid;gap:.8rem;margin-top:.5rem} label{font-weight:600} input[type="text"],input[type="email"],input[type="date"],textarea{width:100%;padding:.6rem .7rem;border:1px solid #cbd5e1;border-radius:10px} textarea{min-height:130px;resize:vertical}
+    .row{display:grid;gap:.8rem} @media (min-width:700px){.row.cols-2{grid-template-columns:1fr 1fr}} footer{margin-top:1.5rem;padding:1rem 0;border-top:1px solid #e5e7eb;background:#fafafa;font-size:.95rem;color:#334155} small{color:#475569}
+    @media print{nav,.cta{display:none !important} body{font-size:12pt} .card{box-shadow:none;border:1px solid #000}} @media (prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important}}
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header role="banner">
+    <div class="container top">
+      <svg class="logo" viewBox="0 0 64 64" role="img" aria-labelledby="logoTitle logoDesc">
+        <title id="logoTitle">Allotment logo</title><desc id="logoDesc">A small green trowel beside the site title</desc>
+        <rect width="64" height="64" rx="12" fill="#e8f5e9"/><path d="M18 44 L34 18 L44 26 L28 52 Z" fill="#2e7d32"/><rect x="42" y="28" width="12" height="6" rx="3" fill="#6d4c41"/>
+      </svg>
+      <div class="title">Senior Citizens Allotment</div>
+    </div>
+    <div class="container">
+      <input type="checkbox" id="menu-toggle" aria-hidden="true" />
+      <label for="menu-toggle" class="menu-btn" aria-controls="primary-nav" aria-expanded="false">Menu</label>
+      <nav aria-label="Primary navigation" id="primary-nav">
+        <ul>
+          <li><a href="#" aria-current="page">Home</a></li><li><a href="#events">Events</a></li><li><a href="#about">About us</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="container">
+    <section class="hero" aria-labelledby="welcome-title">
+      <div class="hero-inner">
+        <svg viewBox="0 0 1200 420" role="img" aria-labelledby="heroTitle heroDesc">
+          <title id="heroTitle">Raised beds with greenery</title><desc id="heroDesc">Stylised garden beds with plants and a path</desc>
+          <defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a5d6a7"/><stop offset="100%" stop-color="#66bb6a"/></linearGradient></defs>
+          <rect width="1200" height="420" fill="url(#g1)"/><rect x="0" y="300" width="1200" height="120" fill="#8d6e63"/>
+          <g fill="#2e7d32"><circle cx="120" cy="320" r="36"/><circle cx="180" cy="320" r="32"/><circle cx="240" cy="320" r="40"/><circle cx="1000" cy="320" r="42"/></g>
+        </svg>
+        <div class="copy">
+          <h1 id="welcome-title">Welcome to our allotment</h1>
+          <p>We’re a friendly bunch of neighbours who enjoy growing good food, sharing tips, and having a natter over a cuppa. If you’re new to gardening, don’t worry — we keep things simple, steady and supportive.</p>
+          <a class="cta" href="#contact" role="button" aria-describedby="cta-info">Join our next open morning</a>
+          <p id="cta-info" class="hint">Scroll to the contact section for details on how to get in touch.</p>
+        </div>
+      </div>
+    </section>
+    <section id="events" class="card" aria-labelledby="events-title">
+      <h2 id="events-title">Events</h2>
+      <p class="hint">All welcome. We keep a gentle pace and always break for tea. </p>
+      <div class="table-wrap">
+        <table>
+          <caption>Upcoming sessions</caption>
+          <thead><tr><th scope="col">What</th><th scope="col">Date</th><th scope="col">Time</th><th scope="col">Where</th><th scope="col">Details</th></tr></thead>
+          <tbody>
+            <tr><td>Open morning &amp; tea</td><td>Tuesday 14 October 2025</td><td>10:00–12:00</td><td>Riverside Allotments, Plot 14–28</td><td>Friendly tour, seed swap, and a cuppa.</td></tr>
+            <tr><td>Composting made easy</td><td>Wednesday 28 October 2025</td><td>11:00–12:00</td><td>Tool Shed</td><td>Short demo on building a simple heap.</td></tr>
+            <tr><td>Gentle winter prep</td><td>Friday 11 November 2025</td><td>10:30–12:00</td><td>Main path by Plot 19</td><td>Mulching beds and tidying safely.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section id="about" class="grid cols-2" aria-labelledby="about-title">
+      <article class="card">
+        <h2 id="about-title">About us</h2>
+        <p>Our plots are easy to reach, the paths are wide, and there’s plenty of seating if you fancy a breather. We grow seasonal vegetables, herbs, and fruit, and we keep a corner for wildlife. You’re welcome whether you’re a complete beginner or an old hand.</p>
+        <ul class="clean">
+          <li><strong>Weekly meet-up:</strong> Wednesdays, 10:00–12:00</li>
+          <li><strong>Where:</strong> Riverside Allotments, Plot 14–28</li>
+          <li><strong>Facilities:</strong> accessible loo, tool shed, tea corner</li>
+        </ul>
+      </article>
+      <aside class="card" aria-labelledby="news-title">
+        <h2 id="news-title">News & tips</h2>
+        <span class="badge" aria-label="Seasonal">Autumn</span>
+        <ul class="clean">
+          <li>Plant garlic and broad beans for an early start next spring.</li>
+          <li>Mulch beds to protect the soil over winter.</li>
+          <li>Top up the bird feeders and cover water butts.</li>
+        </ul>
+      </aside>
+    </section>
+    <section id="gallery" class="card" aria-labelledby="gallery-title">
+      <h2 id="gallery-title">Gallery</h2>
+      <div class="gallery">
+        <figure><img src="images/gallery_1.png" alt="Seedlings in trays ready for planting"><figcaption>Spring seedlings</figcaption></figure>
+        <figure><img src="images/gallery_2.png" alt="Group of gardeners planting together"><figcaption>Community planting day</figcaption></figure>
+        <figure><img src="images/gallery_3.png" alt="Raised beds filled with herbs"><figcaption>Raised beds and herbs</figcaption></figure>
+        <figure><img src="images/gallery_4.png" alt="Basket of freshly picked produce"><figcaption>Harvest time</figcaption></figure>
+        <figure><img src="images/gallery_5.png" alt="Noticeboard showing the watering rota"><figcaption>Watering rota</figcaption></figure>
+        <figure><img src="images/gallery_6.png" alt="Compost bins and leaf mould area"><figcaption>Compost corner</figcaption></figure>
+      </div>
+    </section>
+    <section id="contact" class="card" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <p>If you’d like to visit or have a question, please use the form below. We’ll reply as soon as we can.</p>
+      <form action="mailto:allotment@example.org" method="post" enctype="text/plain" aria-describedby="contact-hint">
+        <p id="contact-hint" class="hint">Your message comes straight to our inbox. We never share your details.</p>
+        <div class="row cols-2">
+          <div><label for="name">Your name</label><input type="text" id="name" name="Name" autocomplete="name" required></div>
+          <div><label for="email">Email</label><input type="email" id="email" name="Email" autocomplete="email" required></div>
+        </div>
+        <div class="row cols-2">
+          <div><label for="date">Preferred visit date</label><input type="date" id="date" name="Preferred visit date"></div>
+          <div><label for="access">Accessibility needs (optional)</label><input type="text" id="access" name="Accessibility needs" placeholder="e.g., step-free access"></div>
+        </div>
+        <div><label for="message">Message</label><textarea id="message" name="Message" required></textarea></div>
+        <div aria-hidden="true" style="position:absolute; left:-5000px;"><label for="hp">Leave this box empty</label><input type="text" id="hp" name="Website field (leave blank)" tabindex="-1" autocomplete="off"></div>
+        <button type="submit" class="cta">Send message</button>
+      </form>
+      <p class="hint">If your email programme doesn’t open automatically, copy our address: <a href="mailto:allotment@example.org">allotment@example.org</a></p>
+    </section>
+  </main>
+  <footer role="contentinfo">
+    <div class="container"><p><strong>Senior Citizens Allotment</strong> — growing together and sharing the harvest.</p><small>&copy; 2025 Senior Citizens Allotment</small></div>
+  </footer>
+</body>
+</html>
